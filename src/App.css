@@ -1598,3 +1598,71 @@ section::after{
     transition-duration:.01ms !important;
   }
 }
+.enterprise-services-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+
+.enterprise-service-card{
+  position:relative;
+  min-height:260px;
+  padding:34px;
+  border-radius:30px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at top right,rgba(0,188,255,.12),transparent 38%),
+    linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+  border:1px solid rgba(255,255,255,.07);
+  transition:.35s ease;
+}
+
+.enterprise-service-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(0,188,255,.28);
+  box-shadow:0 28px 80px rgba(0,0,0,.34);
+}
+
+.enterprise-service-tag{
+  display:block;
+  margin-bottom:24px;
+  color:#00bcff;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.2em;
+}
+
+.enterprise-service-card h3{
+  color:#fff;
+  font-size:30px;
+  line-height:1;
+  letter-spacing:-.05em;
+  margin-bottom:18px;
+}
+
+.enterprise-service-card p{
+  color:#aebbd3;
+  font-size:15px;
+  line-height:1.75;
+}
+
+.enterprise-service-line{
+  position:absolute;
+  left:34px;
+  right:34px;
+  bottom:28px;
+  height:1px;
+  background:linear-gradient(90deg,#00bcff,transparent);
+}
+
+@media(max-width:1100px){
+  .enterprise-services-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:720px){
+  .enterprise-services-grid{
+    grid-template-columns:1fr;
+  }
+}

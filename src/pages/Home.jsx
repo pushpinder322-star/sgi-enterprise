@@ -47,15 +47,55 @@ export default function Home({ setPage }) {
     },
   ];
 
-  const capabilities = [
-    "Managed IT Support",
-    "Network Infrastructure",
-    "Cybersecurity",
-    "CCTV & Surveillance",
-    "Access Control",
-    "Cloud Continuity",
-    "Microsoft 365",
-    "Monitoring & Support",
+  const enterpriseServices = [
+    {
+      title: "Managed IT Support",
+      description:
+        "End-to-end IT operations, device management, Microsoft 365 administration and enterprise user support.",
+      tag: "OPERATIONS",
+    },
+    {
+      title: "Network Infrastructure",
+      description:
+        "Enterprise switching, routing, VLAN architecture, wireless deployment and multi-site connectivity.",
+      tag: "NETWORKING",
+    },
+    {
+      title: "Cybersecurity",
+      description:
+        "Infrastructure hardening, endpoint protection, access governance and operational security visibility.",
+      tag: "SECURITY",
+    },
+    {
+      title: "CCTV & Surveillance",
+      description:
+        "Commercial surveillance ecosystems with centralized monitoring and intelligent operational visibility.",
+      tag: "SURVEILLANCE",
+    },
+    {
+      title: "Access Control",
+      description:
+        "Integrated access management systems designed for controlled environments and operational safety.",
+      tag: "PHYSICAL SECURITY",
+    },
+    {
+      title: "Cloud Continuity",
+      description:
+        "Business continuity, cloud integration, backup systems and resilient operational infrastructure.",
+      tag: "CLOUD",
+    },
+    {
+      title: "Microsoft 365",
+      description:
+        "Enterprise productivity deployment, account administration and collaborative infrastructure systems.",
+      tag: "PRODUCTIVITY",
+    },
+    {
+      title: "Monitoring & Support",
+      description:
+        "24/7 operational visibility, proactive issue response and infrastructure monitoring services.",
+      tag: "MANAGED SERVICES",
+    },
   ];
 
   const technologies = [
@@ -107,7 +147,11 @@ export default function Home({ setPage }) {
   return (
     <main className="sgi-page">
       <div className="enterprise-lines">
-        <span></span><span></span><span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
       <PremiumHero />
@@ -160,10 +204,15 @@ export default function Home({ setPage }) {
           <h2>Integrated IT, network, security and operational infrastructure.</h2>
         </div>
 
-        <div className="sgi-industries-grid">
-          {capabilities.map((item, index) => (
-            <Reveal key={item} delay={index * 0.04}>
-              <div className="sgi-industry-card">{item}</div>
+        <div className="enterprise-services-grid">
+          {enterpriseServices.map((service, index) => (
+            <Reveal key={service.title} delay={index * 0.04}>
+              <div className="enterprise-service-card">
+                <span className="enterprise-service-tag">{service.tag}</span>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <div className="enterprise-service-line"></div>
+              </div>
             </Reveal>
           ))}
         </div>
