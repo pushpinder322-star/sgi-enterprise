@@ -156,6 +156,74 @@ export default function Home({ setPage }) {
 
       <PremiumHero />
       <EnterpriseTrustBar />
+      <Reveal>
+  <section className="sgi-architecture-section">
+
+    <div className="sgi-section-heading">
+      <span>ENTERPRISE INFRASTRUCTURE ARCHITECTURE</span>
+
+      <h2>
+        Integrated operational ecosystems designed for resilience.
+      </h2>
+
+      <p>
+        SmartGuard Innovations combines IT infrastructure,
+        enterprise networking, cybersecurity, surveillance,
+        cloud continuity and managed operations into a unified
+        operational framework built for modern organizations.
+      </p>
+    </div>
+
+    <div className="sgi-architecture-grid">
+
+      <div className="sgi-architecture-card">
+        <span>01</span>
+
+        <h3>Enterprise IT Core</h3>
+
+        <p>
+          Microsoft 365 administration, endpoint management,
+          operational support and business continuity systems.
+        </p>
+      </div>
+
+      <div className="sgi-architecture-card">
+        <span>02</span>
+
+        <h3>Network Infrastructure</h3>
+
+        <p>
+          Enterprise switching, routing, VLAN architecture,
+          wireless systems and multi-site connectivity.
+        </p>
+      </div>
+
+      <div className="sgi-architecture-card">
+        <span>03</span>
+
+        <h3>Security Infrastructure</h3>
+
+        <p>
+          Integrated surveillance, cybersecurity,
+          access control and operational visibility.
+        </p>
+      </div>
+
+      <div className="sgi-architecture-card">
+        <span>04</span>
+
+        <h3>Cloud Continuity</h3>
+
+        <p>
+          Infrastructure resilience, backup strategy,
+          monitoring and operational uptime continuity.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+</Reveal>
 
       <section className="sgi-status-strip">
         <div className="sgi-status-track">
