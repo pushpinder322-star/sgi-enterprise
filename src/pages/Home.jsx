@@ -11,6 +11,11 @@ import EnterpriseTrustBar from "../components/EnterpriseTrustBar";
 import Reveal from "../components/Reveal";
 import EnterpriseAuthoritySection from "../components/EnterpriseAuthoritySection";
 import CaseStudies from "../components/CaseStudies";
+import EnterpriseEcosystem from "../components/EnterpriseEcosystem";
+import EnterpriseFooter from "../components/EnterpriseFooter";
+import EnterpriseTrustCenter from "../components/EnterpriseTrustCenter";
+import InfrastructureTopology from "../components/InfrastructureTopology";
+import CommandCenter from "../components/CommandCenter";
 
 export default function Home({ setPage }) {
   const solutions = [
@@ -159,7 +164,8 @@ export default function Home({ setPage }) {
       </section>
 
       <EnterpriseInfrastructureVisual />
-      
+      <InfrastructureTopology />
+      <CommandCenter />
 
       <section className="sgi-home-process">
         <div className="sgi-section-heading">
@@ -216,6 +222,8 @@ export default function Home({ setPage }) {
         </div>
       </section>
       <CaseStudies />
+      <EnterpriseEcosystem />
+
       <EnterpriseAuthoritySection />
 
       <section className="sgi-home-process">
@@ -236,6 +244,7 @@ export default function Home({ setPage }) {
           ))}
         </div>
       </section>
+      <EnterpriseTrustCenter />
 
       <section className="sgi-final-cta">
         <Reveal>
@@ -255,6 +264,7 @@ export default function Home({ setPage }) {
           </div>
         </Reveal>
       </section>
+      <EnterpriseFooter />
     </main>
   );
 }

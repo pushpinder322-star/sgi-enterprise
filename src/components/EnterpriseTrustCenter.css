@@ -1,0 +1,156 @@
+.enterprise-trust-center{
+  position:relative;
+
+  padding:140px 7%;
+
+  background:#020817;
+
+  overflow:hidden;
+}
+
+.enterprise-trust-center::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(circle at top right,
+  rgba(0,180,255,.16),
+  transparent 35%);
+
+  pointer-events:none;
+}
+
+.trust-center-inner{
+  position:relative;
+  z-index:2;
+}
+
+.trust-center-heading{
+  max-width:1100px;
+
+  margin-bottom:80px;
+}
+
+.trust-center-heading p{
+  margin-bottom:24px;
+
+  color:#00bcff;
+
+  font-size:13px;
+  font-weight:800;
+
+  letter-spacing:.25em;
+  text-transform:uppercase;
+}
+
+.trust-center-heading h2{
+  color:white;
+
+  font-size:clamp(52px,7vw,96px);
+
+  line-height:.95;
+  letter-spacing:-.05em;
+
+  font-weight:800;
+}
+
+.trust-center-grid{
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:28px;
+}
+
+.trust-center-card{
+  position:relative;
+
+  padding:42px;
+
+  min-height:260px;
+
+  border-radius:34px;
+
+  background:
+  linear-gradient(
+  145deg,
+  rgba(11,19,40,.96),
+  rgba(4,10,24,.98));
+
+  border:1px solid rgba(255,255,255,.06);
+
+  overflow:hidden;
+
+  transition:.45s ease;
+}
+
+.trust-center-card::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(circle at top right,
+  rgba(0,180,255,.12),
+  transparent 45%);
+
+  opacity:0;
+
+  transition:.45s ease;
+}
+
+.trust-center-card:hover{
+  transform:translateY(-10px);
+
+  border-color:rgba(0,188,255,.25);
+}
+
+.trust-center-card:hover::before{
+  opacity:1;
+}
+
+.trust-center-card span{
+  display:block;
+
+  margin-bottom:24px;
+
+  color:#00bcff;
+
+  font-size:14px;
+  font-weight:800;
+
+  letter-spacing:.2em;
+}
+
+.trust-center-card h3{
+  color:white;
+
+  font-size:38px;
+
+  line-height:1;
+
+  margin-bottom:22px;
+}
+
+.trust-center-card p{
+  color:rgba(255,255,255,.72);
+
+  font-size:18px;
+
+  line-height:1.8;
+}
+
+@media(max-width:980px){
+
+  .trust-center-grid{
+    grid-template-columns:1fr;
+  }
+
+  .trust-center-heading h2{
+    font-size:54px;
+  }
+
+}

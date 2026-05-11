@@ -1,0 +1,77 @@
+.sgi-ecosystem-section{
+  padding:150px 7%;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(0,188,255,.12),transparent 32%),
+    #040816;
+}
+
+.sgi-ecosystem-copy{
+  max-width:960px;
+  margin-bottom:80px;
+}
+
+.sgi-ecosystem-copy span{
+  color:#00bcff;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.24em;
+}
+
+.sgi-ecosystem-copy h2{
+  margin-top:22px;
+  color:#fff;
+  font-size:clamp(52px,5vw,88px);
+  line-height:.92;
+  letter-spacing:-.07em;
+}
+
+.sgi-ecosystem-copy p{
+  max-width:720px;
+  margin-top:28px;
+  color:#9fb0cc;
+  font-size:18px;
+  line-height:1.9;
+}
+
+.sgi-ecosystem-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.sgi-ecosystem-card{
+  height:150px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:28px;
+  color:#fff;
+  font-size:22px;
+  font-weight:900;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+  border:1px solid rgba(255,255,255,.08);
+  transition:.35s ease;
+}
+
+.sgi-ecosystem-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(0,188,255,.32);
+  box-shadow:0 28px 70px rgba(0,0,0,.32);
+}
+
+@media(max-width:1000px){
+  .sgi-ecosystem-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:700px){
+  .sgi-ecosystem-section{
+    padding:90px 24px;
+  }
+
+  .sgi-ecosystem-grid{
+    grid-template-columns:1fr;
+  }
+}

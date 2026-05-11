@@ -6,8 +6,9 @@ export default function EnterpriseOverlayMenu({
   open,
   setOpen,
   setPage,
-  initialSection = "main",
+  initialSection = "solutions",
 }) {
+
   const [activeSection, setActiveSection] = useState(initialSection);
 
   useEffect(() => {
@@ -15,7 +16,8 @@ export default function EnterpriseOverlayMenu({
   }, [initialSection]);
 
   useEffect(() => {
-    if (open) {
+
+    if(open){
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -24,6 +26,7 @@ export default function EnterpriseOverlayMenu({
     return () => {
       document.body.style.overflow = "auto";
     };
+
   }, [open]);
 
   const navigate = (page) => {
@@ -33,14 +36,17 @@ export default function EnterpriseOverlayMenu({
 
   return (
     <AnimatePresence>
+
       {open && (
+
         <motion.div
           className="sgi-overlay"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.25 }}
+          initial={{ opacity:0 }}
+          animate={{ opacity:1 }}
+          exit={{ opacity:0 }}
+          transition={{ duration:.25 }}
         >
+
           <div
             className="sgi-overlay-backdrop"
             onClick={() => setOpen(false)}
@@ -48,26 +54,32 @@ export default function EnterpriseOverlayMenu({
 
           <motion.div
             className="sgi-overlay-panel"
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 40, opacity: 0 }}
-            transition={{ duration: 0.35 }}
+            initial={{ opacity:0, y:40 }}
+            animate={{ opacity:1, y:0 }}
+            exit={{ opacity:0, y:40 }}
+            transition={{ duration:.4 }}
           >
+
             <div className="sgi-overlay-top">
+
               <div>
-                <h2>SmartGuard Innovations</h2>
-                <p>
-                  Enterprise IT • Network • Security • Automation
-                </p>
+                <span>SMARTGUARD INNOVATIONS</span>
+
+                <h2>
+                  Enterprise Infrastructure Platform
+                </h2>
               </div>
 
               <button onClick={() => setOpen(false)}>
                 Close
               </button>
+
             </div>
 
             <div className="sgi-overlay-grid">
+
               <div className="sgi-overlay-sidebar">
+
                 <div
                   className={activeSection === "solutions" ? "active" : ""}
                   onClick={() => setActiveSection("solutions")}
@@ -83,158 +95,230 @@ export default function EnterpriseOverlayMenu({
                 </div>
 
                 <div
-                  className={activeSection === "projects" ? "active" : ""}
-                  onClick={() => setActiveSection("projects")}
+                  className={activeSection === "operations" ? "active" : ""}
+                  onClick={() => setActiveSection("operations")}
                 >
-                  Projects
+                  Managed Operations
                 </div>
 
                 <div
-                  className={activeSection === "about" ? "active" : ""}
-                  onClick={() => setActiveSection("about")}
+                  className={activeSection === "projects" ? "active" : ""}
+                  onClick={() => setActiveSection("projects")}
                 >
-                  About
+                  Case Studies
                 </div>
+
+                <div
+                  className={activeSection === "company" ? "active" : ""}
+                  onClick={() => setActiveSection("company")}
+                >
+                  Company
+                </div>
+
               </div>
 
               <div className="sgi-overlay-content">
 
+                {/* SOLUTIONS */}
+
                 {activeSection === "solutions" && (
+
                   <div className="sgi-overlay-links">
 
                     <div onClick={() => navigate("protect")}>
                       <span>Security Infrastructure</span>
+
                       <h3>Protect</h3>
 
                       <p>
-                        Integrated surveillance, access control,
-                        cybersecurity and operational protection systems.
+                        Surveillance, cybersecurity,
+                        access control and operational
+                        security ecosystems.
                       </p>
                     </div>
 
                     <div onClick={() => navigate("connect")}>
                       <span>Enterprise Networking</span>
+
                       <h3>Connect</h3>
 
                       <p>
-                        Enterprise switching, routing, wireless
-                        infrastructure and multi-site connectivity.
+                        Switching, routing, wireless,
+                        VLAN architecture and multi-site
+                        enterprise connectivity.
                       </p>
                     </div>
 
                     <div onClick={() => navigate("operate")}>
                       <span>Managed Operations</span>
+
                       <h3>Operate</h3>
 
                       <p>
-                        Monitoring, IT support, infrastructure visibility
-                        and operational continuity management.
+                        Monitoring, infrastructure support,
+                        operational continuity and lifecycle
+                        management systems.
                       </p>
                     </div>
 
                     <div onClick={() => navigate("scale")}>
-                      <span>Cloud & Growth</span>
+                      <span>Cloud Continuity</span>
+
                       <h3>Scale</h3>
 
                       <p>
-                        Scalable infrastructure architecture designed
-                        for business expansion and resilience.
+                        Scalable operational infrastructure,
+                        cloud continuity and resilience-focused
+                        architecture.
                       </p>
                     </div>
 
                     <div onClick={() => navigate("automate")}>
-                      <span>Automation Systems</span>
+                      <span>Integrated Automation</span>
+
                       <h3>Automate</h3>
 
                       <p>
-                        Smart automation, integrated control systems
-                        and intelligent operational workflows.
+                        Intelligent operational automation,
+                        smart systems and connected environments.
                       </p>
                     </div>
 
                   </div>
+
                 )}
+
+                {/* INDUSTRIES */}
 
                 {activeSection === "industries" && (
+
                   <div className="sgi-overlay-links">
 
-                    <div onClick={() => navigate("healthcare")}>
-                      <span>Healthcare Systems</span>
-                      <h3>Healthcare</h3>
+                    <div>
+                      <span>Commercial Infrastructure</span>
+
+                      <h3>Commercial Offices</h3>
 
                       <p>
-                        Secure infrastructure for clinics,
-                        healthcare facilities and operational compliance.
+                        Enterprise networking, security,
+                        operational visibility and managed
+                        infrastructure support.
                       </p>
                     </div>
 
-                    <div onClick={() => navigate("transportation")}>
-                      <span>Fleet & Logistics</span>
-                      <h3>Transportation</h3>
+                    <div>
+                      <span>Care Environments</span>
+
+                      <h3>Retirement Residences</h3>
 
                       <p>
-                        Infrastructure visibility, connectivity and
-                        operational security for transportation businesses.
+                        Secure operational ecosystems
+                        for monitoring, communication
+                        and controlled access.
                       </p>
                     </div>
 
-                    <div onClick={() => navigate("retail")}>
-                      <span>Retail Infrastructure</span>
-                      <h3>Retail</h3>
+                    <div>
+                      <span>Retail Operations</span>
+
+                      <h3>Retail & Restaurants</h3>
 
                       <p>
-                        Multi-location networking, surveillance and
-                        business continuity for retail environments.
+                        Multi-site visibility, connectivity,
+                        surveillance and operational continuity.
                       </p>
                     </div>
 
-                    <div onClick={() => navigate("enterprise")}>
-                      <span>Corporate Infrastructure</span>
-                      <h3>Enterprise</h3>
+                    <div>
+                      <span>Industrial Infrastructure</span>
+
+                      <h3>Warehousing</h3>
 
                       <p>
-                        Enterprise-grade infrastructure modernization
-                        and managed operational ecosystems.
+                        Connected infrastructure systems
+                        for operational efficiency and
+                        site-wide visibility.
                       </p>
                     </div>
 
                   </div>
+
                 )}
+
+                {/* OPERATIONS */}
+
+                {activeSection === "operations" && (
+
+                  <div className="sgi-overlay-placeholder">
+
+                    <h3>
+                      Managed Infrastructure Operations
+                    </h3>
+
+                    <p>
+                      SGI provides operational visibility,
+                      infrastructure lifecycle management,
+                      monitoring systems, continuity planning
+                      and enterprise support environments.
+                    </p>
+
+                  </div>
+
+                )}
+
+                {/* PROJECTS */}
 
                 {activeSection === "projects" && (
+
                   <div className="sgi-overlay-placeholder">
 
-                    <h3>Enterprise Infrastructure Projects</h3>
+                    <h3>
+                      Enterprise Deployment Experience
+                    </h3>
 
                     <p>
-                      SGI delivers enterprise-grade IT, networking,
-                      surveillance and operational modernization
-                      projects across commercial environments.
+                      Multi-site infrastructure modernization,
+                      enterprise wireless deployments,
+                      surveillance ecosystems and operational
+                      continuity projects.
                     </p>
 
                   </div>
+
                 )}
 
-                {activeSection === "about" && (
+                {/* COMPANY */}
+
+                {activeSection === "company" && (
+
                   <div className="sgi-overlay-placeholder">
 
-                    <h3>Enterprise Technology Partner</h3>
+                    <h3>
+                      Enterprise Infrastructure Partner
+                    </h3>
 
                     <p>
-                      SmartGuard Innovations provides integrated
-                      enterprise infrastructure solutions focused on
-                      networking, security, operational continuity
-                      and managed technology services.
+                      SmartGuard Innovations delivers
+                      integrated IT, networking,
+                      cybersecurity, surveillance,
+                      cloud continuity and managed
+                      operational infrastructure.
                     </p>
 
                   </div>
+
                 )}
 
               </div>
+
             </div>
-                    </motion.div>
+
+          </motion.div>
+
         </motion.div>
+
       )}
+
     </AnimatePresence>
   );
 }
