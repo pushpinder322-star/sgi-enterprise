@@ -1,0 +1,189 @@
+.sgi-ops-section{
+  position:relative;
+  padding:150px 7%;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:70px;
+  align-items:start;
+  overflow:hidden;
+
+  background:
+    radial-gradient(circle at 80% 30%,rgba(0,188,255,.12),transparent 34%),
+    linear-gradient(180deg,#050b18,#040816);
+}
+
+.sgi-ops-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+
+  background-size:90px 90px;
+
+  opacity:.22;
+}
+
+.sgi-ops-copy{
+  position:relative;
+  z-index:2;
+}
+
+.sgi-ops-copy span{
+  display:block;
+  margin-bottom:22px;
+  color:#00bcff;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.24em;
+}
+
+.sgi-ops-copy h2{
+  max-width:760px;
+  margin-bottom:28px;
+  color:#fff;
+  font-size:clamp(52px,5vw,88px);
+  line-height:.92;
+  letter-spacing:-.07em;
+}
+
+.sgi-ops-copy p{
+  max-width:640px;
+  color:#9fb0cc;
+  font-size:18px;
+  line-height:1.9;
+}
+
+.sgi-ops-grid{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+.sgi-ops-card{
+  position:relative;
+  overflow:hidden;
+
+  min-height:260px;
+
+  padding:36px;
+
+  border-radius:32px;
+
+  background:
+    linear-gradient(180deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.015));
+
+  border:1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(18px);
+
+  transition:.4s ease;
+}
+
+.sgi-ops-card:hover{
+  transform:translateY(-10px);
+
+  border-color:rgba(0,188,255,.32);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.36),
+    0 0 40px rgba(0,188,255,.12);
+}
+
+.sgi-ops-pulse{
+  position:relative;
+
+  width:16px;
+  height:16px;
+
+  margin-bottom:28px;
+}
+
+.sgi-ops-pulse span{
+  position:absolute;
+  inset:0;
+
+  border-radius:50%;
+
+  background:#00bcff;
+
+  box-shadow:0 0 20px rgba(0,188,255,.8);
+
+  animation:sgiPulse 2s infinite;
+}
+
+@keyframes sgiPulse{
+  0%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+  70%{
+    transform:scale(2.6);
+    opacity:0;
+  }
+
+  100%{
+    opacity:0;
+  }
+}
+
+.sgi-ops-card h3{
+  margin-bottom:18px;
+
+  color:#fff;
+
+  font-size:34px;
+  font-weight:800;
+
+  line-height:1;
+
+  letter-spacing:-.05em;
+}
+
+.sgi-ops-card p{
+  color:#9fb0cc;
+
+  font-size:16px;
+  line-height:1.8;
+}
+
+.sgi-ops-line{
+  position:absolute;
+
+  left:36px;
+  right:36px;
+  bottom:28px;
+
+  height:1px;
+
+  background:
+    linear-gradient(90deg,#00bcff,transparent);
+}
+
+@media(max-width:1050px){
+
+  .sgi-ops-section{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:760px){
+
+  .sgi-ops-section{
+    padding:90px 24px;
+  }
+
+  .sgi-ops-grid{
+    grid-template-columns:1fr;
+  }
+
+}

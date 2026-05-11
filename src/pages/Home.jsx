@@ -4,9 +4,13 @@ import security1 from "../assets/security/security-1.jpg";
 import cloud1 from "../assets/cloud/cloud-1.jpg";
 import industry1 from "../assets/industries/industry-1.jpg";
 
+import EnterpriseInfrastructureVisual from "../components/EnterpriseInfrastructureVisual";
+import EnterpriseOperationsSection from "../components/EnterpriseOperationsSection";
 import PremiumHero from "../components/PremiumHero";
 import EnterpriseTrustBar from "../components/EnterpriseTrustBar";
 import Reveal from "../components/Reveal";
+import EnterpriseAuthoritySection from "../components/EnterpriseAuthoritySection";
+import CaseStudies from "../components/CaseStudies";
 
 export default function Home({ setPage }) {
   const solutions = [
@@ -30,7 +34,44 @@ export default function Home({ setPage }) {
 
   const technologies = ["Switching", "Routing", "VLANs", "Firewalls", "Wireless", "Cameras", "Intercom", "Automation"];
 
-  const industries = ["Commercial Offices", "Retirement Residences", "Retail & Restaurants", "Transportation", "Warehousing", "Smart Homes"];
+  const industries = [
+    {
+      title: "Commercial Offices",
+      label: "Workplace Infrastructure",
+      text: "Secure IT, network, access control and surveillance systems for modern office environments.",
+      metric: "Business Continuity",
+    },
+    {
+      title: "Retirement Residences",
+      label: "Care Environment",
+      text: "Operational security, monitoring, access control and communication systems for sensitive facilities.",
+      metric: "Safety & Visibility",
+    },
+    {
+      title: "Retail & Restaurants",
+      label: "Customer Operations",
+      text: "Multi-location surveillance, network uptime and managed technology support.",
+      metric: "Multi-Site Ready",
+    },
+    {
+      title: "Transportation",
+      label: "Fleet & Logistics",
+      text: "Infrastructure visibility, connectivity and security for transportation operations.",
+      metric: "Operational Control",
+    },
+    {
+      title: "Warehousing",
+      label: "Industrial Operations",
+      text: "Connected surveillance, access control, Wi-Fi and operational infrastructure.",
+      metric: "Site Reliability",
+    },
+    {
+      title: "Smart Homes",
+      label: "Connected Living",
+      text: "Integrated automation, networking, security and smart technology ecosystems.",
+      metric: "Connected Systems",
+    },
+  ];
 
   const whyItems = [
     ["Operational Continuity", "Systems designed to reduce downtime, improve visibility and support daily operations."],
@@ -72,7 +113,6 @@ export default function Home({ setPage }) {
         </div>
       </section>
 
-     
       <section className="sgi-solutions-section">
         <div className="sgi-section-heading">
           <p>Enterprise Solutions</p>
@@ -118,6 +158,9 @@ export default function Home({ setPage }) {
         </div>
       </section>
 
+      <EnterpriseInfrastructureVisual />
+      
+
       <section className="sgi-home-process">
         <div className="sgi-section-heading">
           <p>Technology Ecosystem</p>
@@ -133,16 +176,23 @@ export default function Home({ setPage }) {
         </div>
       </section>
 
+      <EnterpriseOperationsSection />
+
       <section className="sgi-why-section">
         <div className="sgi-section-heading">
           <p>Industries Served</p>
           <h2>Infrastructure support across commercial and operational environments.</h2>
         </div>
 
-        <div className="sgi-industries-grid">
+        <div className="sgi-premium-industries-grid">
           {industries.map((item, index) => (
-            <Reveal key={item} delay={index * 0.04}>
-              <div className="sgi-industry-card">{item}</div>
+            <Reveal key={item.title} delay={index * 0.05}>
+              <div className="sgi-premium-industry-card">
+                <span>{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                <strong>{item.metric}</strong>
+              </div>
             </Reveal>
           ))}
         </div>
@@ -165,6 +215,8 @@ export default function Home({ setPage }) {
           ))}
         </div>
       </section>
+      <CaseStudies />
+      <EnterpriseAuthoritySection />
 
       <section className="sgi-home-process">
         <div className="sgi-section-heading">
