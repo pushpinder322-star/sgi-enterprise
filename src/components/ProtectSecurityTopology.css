@@ -1,0 +1,201 @@
+.protect-topology-section{
+  position:relative;
+  padding:150px 7%;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:80px;
+  align-items:center;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 80% 40%,rgba(0,188,255,.16),transparent 34%),
+    linear-gradient(180deg,#020817,#06101f);
+}
+
+.protect-topology-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:86px 86px;
+  opacity:.23;
+}
+
+.protect-topology-copy,
+.protect-topology-map{
+  position:relative;
+  z-index:2;
+}
+
+.protect-topology-copy span{
+  display:block;
+  margin-bottom:22px;
+  color:#00bcff;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.24em;
+}
+
+.protect-topology-copy h2{
+  max-width:780px;
+  margin-bottom:28px;
+  color:#fff;
+  font-size:clamp(52px,5vw,88px);
+  line-height:.92;
+  letter-spacing:-.075em;
+}
+
+.protect-topology-copy p{
+  max-width:660px;
+  color:#9fb0cc;
+  font-size:18px;
+  line-height:1.9;
+}
+
+.protect-topology-map{
+  min-height:660px;
+}
+
+.protect-core{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:220px;
+  height:220px;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at top,rgba(0,188,255,.45),rgba(3,7,18,.98));
+  border:1px solid rgba(0,188,255,.45);
+  box-shadow:
+    0 0 110px rgba(0,188,255,.34),
+    inset 0 1px 0 rgba(255,255,255,.12);
+  z-index:5;
+}
+
+.protect-core strong{
+  color:#fff;
+  font-size:30px;
+  font-weight:950;
+  letter-spacing:.14em;
+}
+
+.protect-core small{
+  margin-top:10px;
+  color:#9fdfff;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.protect-node{
+  position:absolute;
+  width:200px;
+  min-height:120px;
+  padding:22px;
+  border-radius:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  font-size:22px;
+  font-weight:900;
+  line-height:1.1;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.018));
+  border:1px solid rgba(255,255,255,.09);
+  backdrop-filter:blur(18px);
+  box-shadow:0 26px 80px rgba(0,0,0,.34);
+  z-index:4;
+  transition:.4s ease;
+}
+
+.protect-node:hover{
+  transform:translateY(-10px);
+  border-color:rgba(0,188,255,.36);
+  box-shadow:
+    0 34px 100px rgba(0,0,0,.42),
+    0 0 50px rgba(0,188,255,.14);
+}
+
+.protect-node-1{top:40px;left:80px;}
+.protect-node-2{top:80px;right:80px;}
+.protect-node-3{top:50%;left:0;transform:translateY(-50%);}
+.protect-node-4{top:50%;right:0;transform:translateY(-50%);}
+.protect-node-5{bottom:65px;left:90px;}
+.protect-node-6{bottom:55px;right:95px;}
+
+.protect-line{
+  position:absolute;
+  height:2px;
+  background:linear-gradient(90deg,transparent,rgba(0,188,255,.85),transparent);
+  z-index:2;
+  overflow:hidden;
+}
+
+.protect-line::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-45%;
+  width:45%;
+  height:100%;
+  background:#00bcff;
+  filter:blur(4px);
+  animation:protectFlow 3.1s linear infinite;
+}
+
+@keyframes protectFlow{
+  from{left:-45%;}
+  to{left:120%;}
+}
+
+.protect-line-1{width:260px;top:175px;left:225px;transform:rotate(28deg);}
+.protect-line-2{width:260px;top:185px;right:225px;transform:rotate(-25deg);}
+.protect-line-3{width:250px;top:50%;left:185px;transform:translateY(-50%);}
+.protect-line-4{width:250px;top:50%;right:185px;transform:translateY(-50%);}
+.protect-line-5{width:260px;bottom:185px;left:225px;transform:rotate(-27deg);}
+.protect-line-6{width:260px;bottom:175px;right:230px;transform:rotate(26deg);}
+
+@media(max-width:1050px){
+  .protect-topology-section{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:760px){
+  .protect-topology-section{
+    padding:90px 24px;
+  }
+
+  .protect-topology-map{
+    min-height:auto;
+    display:grid;
+    gap:18px;
+  }
+
+  .protect-core,
+  .protect-node{
+    position:relative;
+    inset:auto;
+    transform:none;
+    width:100%;
+    border-radius:28px;
+  }
+
+  .protect-core{
+    height:180px;
+  }
+
+  .protect-line{
+    display:none;
+  }
+}
