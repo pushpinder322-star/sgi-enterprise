@@ -236,8 +236,8 @@ section::after{
 }
 
 .sgi-section-heading{
-  max-width:900px;
-  margin-bottom:70px;
+  max-width:1100px;
+  margin-bottom:54px;
 }
 
 .sgi-section-heading p{
@@ -250,12 +250,12 @@ section::after{
 }
 
 .sgi-section-heading h2{
-  max-width:900px;
+  max-width:980px;
   color:#fff;
-  font-size:72px;
+  font-size:clamp(48px,5vw,78px);
   font-weight:800;
-  line-height:1.02;
-  letter-spacing:-.07em;
+  line-height:.95;
+  letter-spacing:-.06em;
 }
 
 .sgi-outline-btn{
@@ -548,8 +548,8 @@ section::after{
 }
 
 .sgi-why-card{
-  min-height:260px;
-  padding:44px;
+  min-height:220px;
+  padding:36px;
 }
 
 .sgi-why-card:hover,
@@ -560,11 +560,11 @@ section::after{
 }
 
 .sgi-why-card h3{
-  margin-bottom:18px;
+  margin-bottom:16px;
   color:#fff;
-  font-size:34px;
+  font-size:28px;
   font-weight:800;
-  letter-spacing:-.045em;
+  letter-spacing:-.04em;
 }
 
 .sgi-why-card p{
@@ -1665,200 +1665,4 @@ section::after{
   .enterprise-services-grid{
     grid-template-columns:1fr;
   }
-}
-/* =========================
-   ENTERPRISE ARCHITECTURE
-========================= */
-
-.sgi-architecture-section{
-  position:relative;
-
-  padding:110px 7% 90px;
-
-  overflow:hidden;
-
-  background:
-    radial-gradient(circle at top left,
-      rgba(0,163,255,.14),
-      transparent 34%),
-    #020817;
-}
-
-.sgi-architecture-section::before{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-
-  background-size:90px 90px;
-
-  opacity:.25;
-
-  pointer-events:none;
-}
-
-.sgi-architecture-section .sgi-section-heading{
-  position:relative;
-  z-index:2;
-
-  margin-bottom:70px;
-}
-
-.sgi-architecture-section .sgi-section-heading span{
-  color:#00bfff;
-
-  font-size:13px;
-  font-weight:800;
-
-  letter-spacing:.28em;
-  text-transform:uppercase;
-}
-
-.sgi-architecture-section .sgi-section-heading h2{
-  margin-top:18px;
-  margin-bottom:28px;
-
-  max-width:920px;
-
-  font-size:clamp(52px,5.8vw,96px);
-  line-height:.95;
-  letter-spacing:-0.05em;
-
-  color:white;
-}
-
-.sgi-architecture-section .sgi-section-heading p{
-  max-width:760px;
-
-  color:#8ea3c7;
-
-  font-size:16px;
-  line-height:1.8;
-
-  text-transform:uppercase;
-  letter-spacing:.16em;
-}
-
-.sgi-architecture-grid{
-  position:relative;
-  z-index:2;
-
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-
-  gap:28px;
-}
-
-.sgi-architecture-card{
-  position:relative;
-
-  padding:38px;
-
-  border-radius:32px;
-
-  background:
-    linear-gradient(145deg,
-      rgba(18,32,58,.95),
-      rgba(7,15,30,.95));
-
-  border:1px solid rgba(255,255,255,.08);
-
-  overflow:hidden;
-
-  transition:.45s ease;
-}
-
-.sgi-architecture-card::before{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    radial-gradient(circle at top right,
-      rgba(0,191,255,.18),
-      transparent 40%);
-
-  opacity:0;
-
-  transition:.45s ease;
-}
-
-.sgi-architecture-card:hover{
-  transform:translateY(-10px);
-
-  border-color:rgba(0,191,255,.35);
-
-  box-shadow:
-    0 20px 60px rgba(0,0,0,.45),
-    0 0 40px rgba(0,191,255,.12);
-}
-
-.sgi-architecture-card:hover::before{
-  opacity:1;
-}
-
-.sgi-architecture-card span{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-
-  width:52px;
-  height:52px;
-
-  margin-bottom:26px;
-
-  border-radius:16px;
-
-  background:rgba(0,191,255,.12);
-
-  color:#00bfff;
-
-  font-size:15px;
-  font-weight:800;
-  letter-spacing:.15em;
-}
-
-.sgi-architecture-card h3{
-  margin-bottom:16px;
-
-  color:white;
-
-  font-size:32px;
-  font-weight:800;
-
-  letter-spacing:-0.03em;
-}
-
-.sgi-architecture-card p{
-  max-width:520px;
-
-  color:#9fb0c8;
-
-  font-size:16px;
-  line-height:1.8;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:980px){
-
-  .sgi-architecture-grid{
-    grid-template-columns:1fr;
-  }
-
-  .sgi-architecture-section{
-    padding:90px 7%;
-  }
-
-  .sgi-architecture-section .sgi-section-heading h2{
-    font-size:56px;
-  }
-
 }

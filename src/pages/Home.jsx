@@ -10,131 +10,33 @@ import Reveal from "../components/Reveal";
 
 export default function Home({ setPage }) {
   const solutions = [
-    {
-      title: "Protect",
-      description:
-        "Cybersecurity, CCTV, access control and monitoring systems for business protection.",
-      image: security1,
-      page: "protect",
-    },
-    {
-      title: "Connect",
-      description:
-        "Switching, routing, managed Wi-Fi and multi-site network connectivity.",
-      image: network1,
-      page: "connect",
-    },
-    {
-      title: "Operate",
-      description:
-        "Managed IT operations, monitoring, support and infrastructure lifecycle management.",
-      image: architecture1,
-      page: "operate",
-    },
-    {
-      title: "Scale",
-      description:
-        "Cloud readiness, backup, continuity and scalable infrastructure for growth.",
-      image: cloud1,
-      page: "scale",
-    },
-    {
-      title: "Automate",
-      description:
-        "Smart automation, integrated control systems and connected environments.",
-      image: industry1,
-      page: "automate",
-    },
+    { title: "Protect", description: "Cybersecurity, CCTV, access control and monitoring systems for business protection.", image: security1, page: "protect" },
+    { title: "Connect", description: "Switching, routing, managed Wi-Fi and multi-site network connectivity.", image: network1, page: "connect" },
+    { title: "Operate", description: "Managed IT operations, monitoring, support and infrastructure lifecycle management.", image: architecture1, page: "operate" },
+    { title: "Scale", description: "Cloud readiness, backup, continuity and scalable infrastructure for growth.", image: cloud1, page: "scale" },
+    { title: "Automate", description: "Smart automation, integrated control systems and connected environments.", image: industry1, page: "automate" },
   ];
 
   const enterpriseServices = [
-    {
-      title: "Managed IT Support",
-      description:
-        "End-to-end IT operations, device management, Microsoft 365 administration and enterprise user support.",
-      tag: "OPERATIONS",
-    },
-    {
-      title: "Network Infrastructure",
-      description:
-        "Enterprise switching, routing, VLAN architecture, wireless deployment and multi-site connectivity.",
-      tag: "NETWORKING",
-    },
-    {
-      title: "Cybersecurity",
-      description:
-        "Infrastructure hardening, endpoint protection, access governance and operational security visibility.",
-      tag: "SECURITY",
-    },
-    {
-      title: "CCTV & Surveillance",
-      description:
-        "Commercial surveillance ecosystems with centralized monitoring and intelligent operational visibility.",
-      tag: "SURVEILLANCE",
-    },
-    {
-      title: "Access Control",
-      description:
-        "Integrated access management systems designed for controlled environments and operational safety.",
-      tag: "PHYSICAL SECURITY",
-    },
-    {
-      title: "Cloud Continuity",
-      description:
-        "Business continuity, cloud integration, backup systems and resilient operational infrastructure.",
-      tag: "CLOUD",
-    },
-    {
-      title: "Microsoft 365",
-      description:
-        "Enterprise productivity deployment, account administration and collaborative infrastructure systems.",
-      tag: "PRODUCTIVITY",
-    },
-    {
-      title: "Monitoring & Support",
-      description:
-        "24/7 operational visibility, proactive issue response and infrastructure monitoring services.",
-      tag: "MANAGED SERVICES",
-    },
+    { title: "Managed IT Support", description: "End-to-end IT operations, device management, Microsoft 365 administration and enterprise user support.", tag: "OPERATIONS" },
+    { title: "Network Infrastructure", description: "Enterprise switching, routing, VLAN architecture, wireless deployment and multi-site connectivity.", tag: "NETWORKING" },
+    { title: "Cybersecurity", description: "Infrastructure hardening, endpoint protection, access governance and operational security visibility.", tag: "SECURITY" },
+    { title: "CCTV & Surveillance", description: "Commercial surveillance ecosystems with centralized monitoring and intelligent operational visibility.", tag: "SURVEILLANCE" },
+    { title: "Access Control", description: "Integrated access management systems designed for controlled environments and operational safety.", tag: "PHYSICAL SECURITY" },
+    { title: "Cloud Continuity", description: "Business continuity, cloud integration, backup systems and resilient operational infrastructure.", tag: "CLOUD" },
+    { title: "Microsoft 365", description: "Enterprise productivity deployment, account administration and collaborative infrastructure systems.", tag: "PRODUCTIVITY" },
+    { title: "Monitoring & Support", description: "24/7 operational visibility, proactive issue response and infrastructure monitoring services.", tag: "MANAGED SERVICES" },
   ];
 
-  const technologies = [
-    "Switching",
-    "Routing",
-    "VLANs",
-    "Firewalls",
-    "Wireless",
-    "Cameras",
-    "Intercom",
-    "Automation",
-  ];
+  const technologies = ["Switching", "Routing", "VLANs", "Firewalls", "Wireless", "Cameras", "Intercom", "Automation"];
 
-  const industries = [
-    "Commercial Offices",
-    "Retirement Residences",
-    "Retail & Restaurants",
-    "Transportation",
-    "Warehousing",
-    "Smart Homes",
-  ];
+  const industries = ["Commercial Offices", "Retirement Residences", "Retail & Restaurants", "Transportation", "Warehousing", "Smart Homes"];
 
   const whyItems = [
-    [
-      "Operational Continuity",
-      "Systems designed to reduce downtime, improve visibility and support daily operations.",
-    ],
-    [
-      "Unified Systems",
-      "One partner for IT, networking, cybersecurity, security systems, cloud and automation.",
-    ],
-    [
-      "Enterprise Deployment",
-      "Structured assessment, design, installation, configuration and support methodology.",
-    ],
-    [
-      "Scalable Architecture",
-      "Infrastructure planned for growth, multi-site expansion and long-term lifecycle.",
-    ],
+    ["Operational Continuity", "Systems designed to reduce downtime, improve visibility and support daily operations."],
+    ["Unified Systems", "One partner for IT, networking, cybersecurity, security systems, cloud and automation."],
+    ["Enterprise Deployment", "Structured assessment, design, installation, configuration and support methodology."],
+    ["Scalable Architecture", "Infrastructure planned for growth, multi-site expansion and long-term lifecycle."],
   ];
 
   const process = [
@@ -156,74 +58,6 @@ export default function Home({ setPage }) {
 
       <PremiumHero />
       <EnterpriseTrustBar />
-      <Reveal>
-  <section className="sgi-architecture-section">
-
-    <div className="sgi-section-heading">
-      <span>ENTERPRISE INFRASTRUCTURE ARCHITECTURE</span>
-
-      <h2>
-        Integrated operational ecosystems designed for resilience.
-      </h2>
-
-      <p>
-        SmartGuard Innovations combines IT infrastructure,
-        enterprise networking, cybersecurity, surveillance,
-        cloud continuity and managed operations into a unified
-        operational framework built for modern organizations.
-      </p>
-    </div>
-
-    <div className="sgi-architecture-grid">
-
-      <div className="sgi-architecture-card">
-        <span>01</span>
-
-        <h3>Enterprise IT Core</h3>
-
-        <p>
-          Microsoft 365 administration, endpoint management,
-          operational support and business continuity systems.
-        </p>
-      </div>
-
-      <div className="sgi-architecture-card">
-        <span>02</span>
-
-        <h3>Network Infrastructure</h3>
-
-        <p>
-          Enterprise switching, routing, VLAN architecture,
-          wireless systems and multi-site connectivity.
-        </p>
-      </div>
-
-      <div className="sgi-architecture-card">
-        <span>03</span>
-
-        <h3>Security Infrastructure</h3>
-
-        <p>
-          Integrated surveillance, cybersecurity,
-          access control and operational visibility.
-        </p>
-      </div>
-
-      <div className="sgi-architecture-card">
-        <span>04</span>
-
-        <h3>Cloud Continuity</h3>
-
-        <p>
-          Infrastructure resilience, backup strategy,
-          monitoring and operational uptime continuity.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-</Reveal>
 
       <section className="sgi-status-strip">
         <div className="sgi-status-track">
@@ -238,6 +72,7 @@ export default function Home({ setPage }) {
         </div>
       </section>
 
+     
       <section className="sgi-solutions-section">
         <div className="sgi-section-heading">
           <p>Enterprise Solutions</p>
@@ -248,10 +83,7 @@ export default function Home({ setPage }) {
           {solutions.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.08}>
               <button className="sgi-solution-card" onClick={() => setPage(item.page)}>
-                <div
-                  className="sgi-solution-image"
-                  style={{ backgroundImage: `url(${item.image})` }}
-                >
+                <div className="sgi-solution-image" style={{ backgroundImage: `url(${item.image})` }}>
                   <div className="sgi-media-scan"></div>
                 </div>
 
@@ -365,12 +197,8 @@ export default function Home({ setPage }) {
             </span>
 
             <div className="sgi-final-cta-buttons">
-              <button onClick={() => setPage("contact")}>
-                Schedule Infrastructure Assessment
-              </button>
-              <button className="sgi-outline-btn" onClick={() => setPage("protect")}>
-                Explore Enterprise Solutions
-              </button>
+              <button onClick={() => setPage("contact")}>Schedule Infrastructure Assessment</button>
+              <button className="sgi-outline-btn" onClick={() => setPage("protect")}>Explore Enterprise Solutions</button>
             </div>
           </div>
         </Reveal>
