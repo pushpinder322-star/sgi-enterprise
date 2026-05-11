@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root{
+  font-family:"Inter", system-ui, sans-serif;
+  background:#050816;
+  color:#fff;
+}
+
+body{
+  margin:0;
+}
+
+h1,h2,h3,h4{
+  font-family:"Space Grotesk", "Inter", sans-serif;
+}

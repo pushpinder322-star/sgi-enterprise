@@ -1,0 +1,82 @@
+export const solutionMenu = [
+  {
+    title: "Protect",
+    description: "Security, cybersecurity, monitoring, and risk reduction.",
+    items: [
+      "Cybersecurity",
+      "CCTV Surveillance",
+      "Access Control",
+      "Intercom Systems",
+      "Alarm Systems",
+      "Security Monitoring",
+      "Endpoint Protection",
+      "Backup & Recovery",
+      "Firewall Security",
+    ],
+  },
+  {
+    title: "Connect",
+    description: "Network infrastructure, wireless, cabling, and connectivity.",
+    items: [
+      "Access Networking",
+      "Wireless Networks",
+      "Switching Solutions",
+      "Routing & Protocols",
+      "VLAN Architecture",
+      "Structured Cabling",
+      "VPN & Remote Connectivity",
+      "Multi-Site Networking",
+      "Network Monitoring",
+    ],
+  },
+  {
+    title: "Operate",
+    description: "Managed IT, support, users, devices, and daily operations.",
+    items: [
+      "Managed IT Services",
+      "Microsoft 365 Support",
+      "Helpdesk Support",
+      "User Provisioning",
+      "Endpoint Management",
+      "Device Deployment",
+      "Remote Support",
+      "System Maintenance",
+    ],
+  },
+  {
+    title: "Scale",
+    description: "Cloud, continuity, backup, expansion, and resilience.",
+    items: [
+      "Cloud Solutions",
+      "Cloud Backup",
+      "Disaster Recovery",
+      "Business Continuity",
+      "Remote Access",
+      "Hybrid Work Systems",
+      "Infrastructure Expansion",
+      "Continuity Planning",
+    ],
+  },
+  {
+    title: "Automate",
+    description: "Smart homes, smart spaces, lighting, locks, and control systems.",
+    items: [
+      "Smart Home Automation",
+      "Smart Lighting",
+      "Smart Locks",
+      "Smart Climate Control",
+      "Voice & Mobile Control",
+      "Integrated Smart Security",
+      "Smart Audio & Entertainment",
+      "Commercial Automation",
+    ],
+  },
+];
+
+export const mainNav = [
+  "Solutions",
+  "Industries",
+  "Managed Services",
+  "Projects",
+  "About",
+];

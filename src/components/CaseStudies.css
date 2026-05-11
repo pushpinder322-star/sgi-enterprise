@@ -1,0 +1,266 @@
+.sgi-case-studies {
+  position: relative;
+  padding: 150px 0;
+  background:
+    linear-gradient(180deg, #02040b 0%, #07101f 48%, #02040b 100%);
+  overflow: hidden;
+}
+
+.sgi-case-studies::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(0,188,255,.16), transparent 24%),
+    radial-gradient(circle at 82% 32%, rgba(61,111,255,.14), transparent 26%);
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.case-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1320px, 92%);
+  margin: 0 auto;
+}
+
+.case-heading {
+  margin-bottom: 85px;
+}
+
+.case-heading p {
+  color: #00bcff;
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.case-heading h2 {
+  max-width: 980px;
+  color: white;
+  font-size: clamp(46px, 5.4vw, 94px);
+  line-height: .9;
+  letter-spacing: -.085em;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.case-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 540px;
+  padding: 38px;
+  border-radius: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  background:
+    radial-gradient(circle at 82% 12%, rgba(0,188,255,.18), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.025));
+
+  border: 1px solid rgba(255,255,255,.105);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.05),
+    0 30px 90px rgba(0,0,0,.26);
+
+  backdrop-filter: blur(18px);
+  transition: .45s ease;
+}
+
+.case-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(0,188,255,.18), transparent 34%),
+    linear-gradient(180deg, transparent 35%, rgba(0,0,0,.34));
+  opacity: 0;
+  transition: .45s ease;
+}
+
+.case-card::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  right: 34px;
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,188,255,.22);
+  background:
+    radial-gradient(circle, rgba(0,188,255,.18), transparent 58%);
+  filter: blur(.2px);
+  opacity: .75;
+}
+
+.case-card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(0,188,255,.46);
+  box-shadow:
+    0 42px 120px rgba(0,0,0,.42),
+    0 0 70px rgba(0,188,255,.12);
+}
+
+.case-card:hover::before {
+  opacity: 1;
+}
+
+.case-topline,
+.case-card h3,
+.case-card p,
+.case-metrics,
+.case-card button {
+  position: relative;
+  z-index: 2;
+}
+
+.case-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.case-topline span {
+  color: #00bcff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.case-topline small {
+  color: rgba(255,255,255,.20);
+  font-size: 48px;
+  font-weight: 950;
+  letter-spacing: -.09em;
+}
+
+.case-card h3 {
+  color: white;
+  font-size: 41px;
+  line-height: .9;
+  letter-spacing: -.065em;
+  margin-bottom: 22px;
+}
+
+.case-card p {
+  color: #aebbd7;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.case-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.case-metrics em {
+  font-style: normal;
+  color: #dbeafe;
+  font-size: 12px;
+  font-weight: 850;
+  padding: 10px 13px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.065);
+  border: 1px solid rgba(255,255,255,.09);
+}
+
+.case-card button {
+  width: fit-content;
+  border: 1px solid rgba(0,188,255,.32);
+  background: rgba(0,188,255,.10);
+  color: #00bcff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 14px 18px;
+  border-radius: 999px;
+  transition: .35s ease;
+}
+
+.case-card button:hover {
+  background: #00bcff;
+  color: #021018;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 980px) {
+  .sgi-case-studies {
+    padding: 100px 0;
+  }
+
+  .case-heading {
+    margin-bottom: 55px;
+  }
+
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-card {
+    min-height: 460px;
+  }
+}
+/* ===================================
+   SGI CASE STUDY PREMIUM POLISH
+=================================== */
+
+.case-card{
+  isolation:isolate;
+}
+
+.case-card::before{
+  z-index:1;
+}
+
+.case-card::after{
+  animation:caseOrbPulse 5s ease-in-out infinite;
+}
+
+@keyframes caseOrbPulse{
+  0%,100%{
+    opacity:.45;
+    transform:scale(1);
+  }
+
+  50%{
+    opacity:.9;
+    transform:scale(1.08);
+  }
+}
+
+.case-card button{
+  overflow:hidden;
+}
+
+.case-card button::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,.18),
+      transparent
+    );
+  transform:translateX(-130%);
+  transition:transform .8s ease;
+}
+
+.case-card button:hover::after{
+  transform:translateX(130%);
+}

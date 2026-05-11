@@ -1,0 +1,181 @@
+.sgi-logo-wall {
+  position: relative;
+
+  padding: 120px 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #050816,
+      #07101f
+    );
+}
+
+.logo-wall-inner {
+  width: min(1380px, 92%);
+  margin: 0 auto;
+}
+
+.logo-wall-heading {
+  text-align: center;
+
+  margin-bottom: 70px;
+}
+
+.logo-wall-heading p {
+  color: #00bcff;
+
+  text-transform: uppercase;
+  letter-spacing: .22em;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.logo-wall-heading h2 {
+  max-width: 980px;
+
+  margin: 0 auto;
+
+  color: white;
+
+  font-size: clamp(52px, 5vw, 90px);
+
+  line-height: .92;
+  letter-spacing: -.08em;
+}
+
+/* MARQUEE */
+
+.logo-marquee {
+  overflow: hidden;
+
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+
+  width: fit-content;
+
+  animation: logoScroll 36s linear infinite;
+}
+
+@keyframes logoScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* CARDS */
+
+.logo-card {
+  width: 240px;
+  height: 140px;
+
+  margin-right: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.015)
+    );
+
+  border: 1px solid rgba(255,255,255,.06);
+
+  backdrop-filter: blur(12px);
+
+  transition: .35s ease;
+}
+
+.logo-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(0,188,255,.34);
+
+  box-shadow:
+    0 24px 70px rgba(0,0,0,.35),
+    0 0 30px rgba(0,188,255,.10);
+}
+
+.logo-card img {
+  max-width: 150px;
+  max-height: 60px;
+
+  object-fit: contain;
+
+  opacity: .92;
+
+  transition: .35s ease;
+}
+
+.logo-card:hover img {
+  transform: scale(1.06);
+}
+/* ===================================
+   SGI LOGO WALL PREMIUM REFINEMENT
+=================================== */
+
+.logo-marquee::before,
+.logo-marquee::after{
+  content:"";
+  position:absolute;
+  top:0;
+  width:180px;
+  height:100%;
+  z-index:3;
+  pointer-events:none;
+}
+
+.logo-marquee::before{
+  left:0;
+  background:linear-gradient(90deg,#050816,transparent);
+}
+
+.logo-marquee::after{
+  right:0;
+  background:linear-gradient(270deg,#07101f,transparent);
+}
+
+.logo-card{
+  position:relative;
+  overflow:hidden;
+}
+
+.logo-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,.12),
+      transparent
+    );
+  transform:translateX(-120%);
+  transition:transform .9s ease;
+}
+
+.logo-card:hover::before{
+  transform:translateX(120%);
+}
+
+.logo-track:hover{
+  animation-play-state:paused;
+}
